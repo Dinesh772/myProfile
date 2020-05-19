@@ -1,0 +1,98 @@
+{
+  "name": "shopping-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@ib/api": "1.0.8",
+    "@ib/api-constants": "1.0.8",
+    "@ib/mobx-promise": "1.0.8",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "25.2.1",
+    "@types/node": "13.11.0",
+    "@types/react": "16.9.32",
+    "@types/react-dom": "16.9.6",
+    "apisauce": "1.1.1",
+    "autoprefixer": "^9.7.5",
+    "babel-plugin-macros": "^2.8.0",
+    "combinations": "^1.0.0",
+    "emotion": "^10.0.27",
+    "glamor": "2.20.40",
+    "js-cookie": "2.2.1",
+    "mobx": "5.15.0",
+    "mobx-logger": "^0.7.1",
+    "mobx-react": "6.1.4",
+    "postcss-cli": "^7.1.0",
+    "random": "^2.2.0",
+    "react": "^16.13.0",
+    "react-cookie-consent": "3.0.0",
+    "react-dom": "^16.13.0",
+    "react-icons": "3.10.0",
+    "react-loader-spinner": "^3.1.5",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "react-toastify": "5.5.0",
+    "recharts": "^1.8.5",
+    "tailwind.macro": "^1.0.0-alpha.10",
+    "typescript": "3.8.3"
+  },
+  "scripts": {
+    "build:css": "postcss src/index.css -o src/styles/tailwind.css",
+    "watch:css": "postcss src/index.css -o src/styles/tailwind.css",
+    "start": "npm run watch:css &  react-scripts start",
+    "build": "npm run build:css & react-scripts build",
+    "test": "react-app-rewired test --env=jest-environment-jsdom-sixteen",
+    "coverage": "react-app-rewired test --env=jest-environment-jsdom-sixteen --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "js:start": "npm run watch:css & react-app-rewired start",
+    "js:build": "npm run build:css react-app-rewired build",
+    "js:test": "react-app-rewired test --env=jest-environment-jsdom-sixteen",
+    "js:eject": "react-app-rewired eject",
+    "deploy": "export PUBLIC_URL=/2019/$C9_USER/react && npm run build && ./deploy.sh"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "7.7.2",
+    "@babel/plugin-proposal-decorators": "7.7.0",
+    "@babel/plugin-syntax-jsx": "7.2.0",
+    "@babel/preset-env": "7.7.1",
+    "@testing-library/jest-dom": "5.5.0",
+    "@testing-library/react": "10.0.3",
+    "babel-eslint": "10.0.3",
+    "customize-cra": "0.9.1",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.2",
+    "jest-environment-jsdom-sixteen": "1.0.3",
+    "react-app-rewired": "2.1.5",
+    "tailwindcss": "^1.2.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "!src/eCommerceApp/components/home.js",
+      "!src/eCommerceApp/routes/**/*.{ts,tsx,js,jsx}",
+      "!src/common/**/*.{ts,tsx,js,jsx}",
+      "!src/authentication/utils/**/*.{ts,tsx,js,jsx}",
+      "!src/authentication/routes/**/*.{ts,tsx,js,jsx}",
+      "!src/eCommerceApp/utils/**/*.{ts,tsx,js,jsx}",
+      "!src/App.tsx",
+      "!src/index.js",
+      "!src/serviceWorker.ts"
+    ]
+  }
+}
